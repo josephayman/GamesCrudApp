@@ -1,5 +1,3 @@
-import React from 'react'
-
 const GameTable = ({games}) => {
   return (
     <div>
@@ -11,7 +9,7 @@ const GameTable = ({games}) => {
                     <th>Title</th>
                     <th>Description</th>
                     <th>Platform</th>
-                    <th>Realase Year</th>
+                    <th>Release Year</th>
                 </tr>
             </thead>
             <tbody>
