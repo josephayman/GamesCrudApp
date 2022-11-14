@@ -21,6 +21,4 @@ dotnet tool install -g Microsoft.dotnet-httprepl
 If error Unable to find an OpenAPI description. Use: dotnet dev-certs https --trust
 httprepl https://localhost:{PORT}
 
-https://localhost:{PORT}/> ls
-.                 []
-WeatherForecast   [GET] 
+dotnet add package Microsoft.AspNetCore.Cors --version 2.2.0

@@ -1,26 +1,36 @@
+import { useState, useEffect } from "react";
+import axios from "axios";
 import GameTable from "../components/GameTable";
 
 const Games = () => {
-  let games = [
-    {
-      id: 1,
-      title: "Marvel's Avengers",
-      description: "Game 1 description",
-    },
-    {
-      id: 2,
-      title: "Marvel's Spider",
-      description: "Game 2 description",
-    },
-  ];
+  const [games, setGames] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  let api = true;
+  useEffect(() => {
+    axios
+      .get("http://localhost:5262/Game")
+      .then((response) => {
+        setGames(response.data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setError(err);
+        setLoading(false);
+      });
+  }, []);
 
   return (
     <div>
       <div className="container">
         <h2>Games</h2>
-        {api ? <GameTable games={games} /> : <h3>Loading...</h3>}
+        {loading ? (
+          <p>Loading...</p>
+        ) : error ? (
+          <p>Error: {error.message}</p>
+        ) : (
+          <GameTable games={games} />
+        )}
       </div>
     </div>
   );
