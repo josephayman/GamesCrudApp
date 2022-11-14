@@ -51,10 +51,15 @@ th, td {
 button {
   background-color: #333;
   color: #fff;
-  border: none;
+  border: 1px solid #333;
   border-radius: 4px;
   padding: 10px 20px;
   font-size: 16px;
   font-weight: 300;
   cursor: pointer;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #333;
 }
