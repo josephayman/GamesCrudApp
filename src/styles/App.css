@@ -74,6 +74,18 @@ Table of Contents:
   margin: 20px 0 40px 0;
 }
 
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-button {
+  font-size: 14px;
+  width: 120px;
+  height: 40px;
+}
+
 /* Featured Games */
 
 .featured-games {
@@ -89,4 +101,5 @@ Table of Contents:
   padding: 20px 40px 20px 40px;
   border:rgba(0, 0, 0, 0.1) solid;
   border-radius: 20px;
+  cursor: pointer;
 }

@@ -4,7 +4,7 @@ const GameTable = ({games}) => {
         <table>
             <thead>
                 <tr>
-                    <th>Game ID</th>
+                    <th>ID</th>
                     <th></th>
                     <th>Title</th>
                     <th>Description</th>
@@ -16,7 +16,7 @@ const GameTable = ({games}) => {
                 {games.map((game) => (
                     <tr key={game.id}>
                         <td>{game.id}</td>
-                        <td><img src={game.image} alt={game.title} width="50" height="50" /></td>
+                        <td><img style={{borderRadius: "50%"}} src={game.imageUrl} alt={game.title} width="50" height="50" /></td>
                         <td>{game.name}</td>
                         <td>{game.description}</td>
                         <td>{game.platform}</td>

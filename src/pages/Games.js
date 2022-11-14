@@ -27,10 +27,13 @@ const Games = () => {
   return (
     <div>
       <div className="container">
-        <h2>Games</h2>
-        <button onClick={() => setToggleView(!toggleView)}>
-          {toggleView ? "Grid View" : "Table View"}
-        </button>
+        <div className="row">
+          <h2>Games</h2>
+          <button className="toggle-button" onClick={() => setToggleView(!toggleView)}>
+            {toggleView ? "Grid View" : "Table View"}
+          </button>
+        </div>
+        <div className="divider"></div>
         {loading ? (
           <p>Loading...</p>
         ) : error ? (
