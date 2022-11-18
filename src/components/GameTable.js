@@ -1,4 +1,6 @@
+import "../styles/App.css";
 const GameTable = ({games}) => {
+   
   return (
     <div>
         <table>
@@ -10,6 +12,7 @@ const GameTable = ({games}) => {
                     <th>Description</th>
                     <th>Platform</th>
                     <th>Release Year</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -21,6 +24,10 @@ const GameTable = ({games}) => {
                         <td>{game.description}</td>
                         <td>{game.platform}</td>
                         <td>{game.releaseYear}</td>
+                        <td> 
+                            <button className="edit-button">Edit</button>
+                            <button className="delete-button">Delete</button>
+                        </td>
                     </tr>
                 ))}
             </tbody>

@@ -10,6 +10,10 @@ const GameGrid = ({games}) => {
                 <p>{game.description}</p>
                 <p>{game.platform}</p>
                 <p>{game.releaseYear}</p>
+                <div>
+                  <button className="edit-button">Edit</button>
+                  <button className="delete-button">X</button>
+                </div>
             </div>
         ))}
     </div>

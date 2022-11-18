@@ -85,6 +85,30 @@ Table of Contents:
 .toggle-button {
   margin-left: 20px;
 }
+
+.edit-button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.delete-button {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
 /* Featured Games */
 
 .featured-games {
@@ -92,14 +116,12 @@ Table of Contents:
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 40px;
   margin-top: 20px;
-
 }
 
 .featured-games .game {
   margin-bottom: 20px;
   padding: 20px 40px 20px 40px;
-  border:rgba(0, 0, 0, 0.1) solid;
+  border: rgba(0, 0, 0, 0.1) solid;
   border-radius: 20px;
   cursor: pointer;
 }
-
